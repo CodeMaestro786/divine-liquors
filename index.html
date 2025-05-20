@@ -9,8 +9,16 @@
 </head>
 <body>
     <header>
+        <div class="video-overlay">
+            <video autoplay muted loop>
+                <source src="heineken_pour.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <div class="navbar">
-            <h1>Divine Liquors</h1>
+            <div class="logo">
+                <img src="logo.png" alt="Divine Liquors Logo">
+            </div>
             <div class="menu-toggle" id="mobile-menu">
                 <i class="fas fa-bars"></i>
             </div>
@@ -40,32 +48,50 @@
                     <div class="product-card">
                         <img src="whiskey.jpg" alt="Whiskey">
                         <h4>Premium Whiskey</h4>
-                        <p>$49.99</p>
+                        <p>Price: R499.99</p>
+                        <p>Available: <strong>8</strong></p>
+                        <input type="number" min="1" max="8" value="1">
+                        <button onclick="addToCart('Premium Whiskey', 499.99)">Add to Cart</button>
                     </div>
                     <div class="product-card">
                         <img src="vodka.jpg" alt="Vodka">
                         <h4>Craft Vodka</h4>
-                        <p>$39.99</p>
+                        <p>Price: R399.99</p>
+                        <p>Available: <strong>5</strong></p>
+                        <input type="number" min="1" max="5" value="1">
+                        <button onclick="addToCart('Craft Vodka', 399.99)">Add to Cart</button>
                     </div>
                     <div class="product-card">
                         <img src="rum.jpg" alt="Rum">
                         <h4>Exotic Rum</h4>
-                        <p>$29.99</p>
+                        <p>Price: R299.99</p>
+                        <p>Available: <strong>10</strong></p>
+                        <input type="number" min="1" max="10" value="1">
+                        <button onclick="addToCart('Exotic Rum', 299.99)">Add to Cart</button>
                     </div>
                     <div class="product-card">
                         <img src="gin.jpg" alt="Gin">
                         <h4>Fine Gin</h4>
-                        <p>$34.99</p>
+                        <p>Price: R349.99</p>
+                        <p>Available: <strong>6</strong></p>
+                        <input type="number" min="1" max="6" value="1">
+                        <button onclick="addToCart('Fine Gin', 349.99)">Add to Cart</button>
                     </div>
                     <div class="product-card">
                         <img src="tequila.jpg" alt="Tequila">
                         <h4>Aged Tequila</h4>
-                        <p>$44.99</p>
+                        <p>Price: R449.99</p>
+                        <p>Available: <strong>4</strong></p>
+                        <input type="number" min="1" max="4" value="1">
+                        <button onclick="addToCart('Aged Tequila', 449.99)">Add to Cart</button>
                     </div>
                     <div class="product-card">
                         <img src="wine.jpg" alt="Wine">
                         <h4>Red Wine</h4>
-                        <p>$24.99</p>
+                        <p>Price: R249.99</p>
+                        <p>Available: <strong>7</strong></p>
+                        <input type="number" min="1" max="7" value="1">
+                        <button onclick="addToCart('Red Wine', 249.99)">Add to Cart</button>
                     </div>
                 </div>
             </div>
@@ -74,7 +100,126 @@
         <!-- Products Section -->
         <section id="products" class="section" style="display:none;">
             <h2>Our Products</h2>
-            <div class="product-list"></div>
+
+            <h3>Whiskey</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="whiskey1.jpg" alt="Whiskey 1">
+                    <h4>Golden Reserve Whiskey</h4>
+                    <p>Price: R699.99</p>
+                    <p>Available: <strong>3</strong></p>
+                    <input type="number" min="1" max="3" value="1">
+                    <button onclick="addToCart('Golden Reserve Whiskey', 699.99)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="whiskey2.jpg" alt="Whiskey 2">
+                    <h4>Classic Blend Whiskey</h4>
+                    <p>Price: R599.99</p>
+                    <p>Available: <strong>5</strong></p>
+                    <input type="number" min="1" max="5" value="1">
+                    <button onclick="addToCart('Classic Blend Whiskey', 599.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3>Vodka</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="vodka1.jpg" alt="Vodka 1">
+                    <h4>Premium Vodka</h4>
+                    <p>Price: R349.99</p>
+                    <p>Available: <strong>10</strong></p>
+                    <input type="number" min="1" max="10" value="1">
+                    <button onclick="addToCart('Premium Vodka', 349.99)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="vodka2.jpg" alt="Vodka 2">
+                    <h4>Craft Distilled Vodka</h4>
+                    <p>Price: R399.99</p>
+                    <p>Available: <strong>7</strong></p>
+                    <input type="number" min="1" max="7" value="1">
+                    <button onclick="addToCart('Craft Distilled Vodka', 399.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3>Rum</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="rum1.jpg" alt="Rum 1">
+                    <h4>Dark Rum</h4>
+                    <p>Price: R299.99</p>
+                    <p>Available: <strong>8</strong></p>
+                    <input type="number" min="1" max="8" value="1">
+                    <button onclick="addToCart('Dark Rum', 299.99)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="rum2.jpg" alt="Rum 2">
+                    <h4>White Rum</h4>
+                    <p>Price: R249.99</p>
+                    <p>Available: <strong>5</strong></p>
+                    <input type="number" min="1" max="5" value="1">
+                    <button onclick="addToCart('White Rum', 249.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3>Gin</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="gin1.jpg" alt="Gin 1">
+                    <h4>London Dry Gin</h4>
+                    <p>Price: R349.99</p>
+                    <p>Available: <strong>6</strong></p>
+                    <input type="number" min="1" max="6" value="1">
+                    <button onclick="addToCart('London Dry Gin', 349.99)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="gin2.jpg" alt="Gin 2">
+                    <h4>Flavored Gin</h4>
+                    <p>Price: R399.99</p>
+                    <p>Available: <strong>4</strong></p>
+                    <input type="number" min="1" max="4" value="1">
+                    <button onclick="addToCart('Flavored Gin', 399.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3>Tequila</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="tequila1.jpg" alt="Tequila 1">
+                    <h4>Blanco Tequila</h4>
+                    <p>Price: R449.99</p>
+                    <p>Available: <strong>5</strong></p>
+                    <input type="number" min="1" max="5" value="1">
+                    <button onclick="addToCart('Blanco Tequila', 449.99)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="tequila2.jpg" alt="Tequila 2">
+                    <h4>Reposado Tequila</h4>
+                    <p>Price: R499.99</p>
+                    <p>Available: <strong>3</strong></p>
+                    <input type="number" min="1" max="3" value="1">
+                    <button onclick="addToCart('Reposado Tequila', 499.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <h3>Wine</h3>
+            <div class="product-list">
+                <div class="product-card">
+                    <img src="wine1.jpg" alt="Wine 1">
+                    <h4>Chardonnay</h4>
+                    <p>Price: R249.99</p>
+                    <p>Available: <strong>10</strong></p>
+                    <input type="number" min="1" max="10" value="1">
+                    <button onclick="addToCart('Chardonnay', 249.99)">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="wine2.jpg" alt="Wine 2">
+                    <h4>Cabernet Sauvignon</h4>
+                    <p>Price: R299.99</p>
+                    <p>Available: <strong>5</strong></p>
+                    <input type="number" min="1" max="5" value="1">
+                    <button onclick="addToCart('Cabernet Sauvignon', 299.99)">Add to Cart</button>
+                </div>
+            </div>
         </section>
 
         <!-- Branches Section -->
@@ -84,7 +229,6 @@
                 <p>Visit us at one of our three luxurious locations to experience our full selection and expert advice.</p>
             </div>
             <div class="branches-grid">
-                <!-- Branch 1 -->
                 <div class="branch-card">
                     <div class="branch-icon">
                         <i class="fas fa-store"></i>
@@ -94,8 +238,6 @@
                     <p><i class="fas fa-phone"></i> (123) 456-7890</p>
                     <p><i class="fas fa-clock"></i> Mon-Sat: 10AM - 10PM<br>Sun: 12PM - 8PM</p>
                 </div>
-                
-                <!-- Branch 2 -->
                 <div class="branch-card">
                     <div class="branch-icon">
                         <i class="fas fa-store"></i>
@@ -105,8 +247,6 @@
                     <p><i class="fas fa-phone"></i> (123) 456-7891</p>
                     <p><i class="fas fa-clock"></i> Mon-Sat: 10AM - 10PM<br>Sun: 12PM - 8PM</p>
                 </div>
-                
-                <!-- Branch 3 -->
                 <div class="branch-card">
                     <div class="branch-icon">
                         <i class="fas fa-store"></i>
@@ -122,7 +262,9 @@
         <!-- About Section -->
         <section id="about" class="section" style="display:none;">
             <h2>About Us</h2>
-            <p>We are Divine Liquors, your go-to destination for the finest alcoholic beverages. Established in 2021, we pride ourselves on offering a unique selection tailored to your preferences.</p>
+            <p>At Divine Liquors, we specialize in providing the finest selection of liquors and wines. Established in 2021, we are committed to quality, excellence, and service. Whether you are a connoisseur or just starting your journey through the world of spirits, we have something for you.</p>
+            <p>Our expert staff is passionate about helping you find the perfect drink for every occasion, whether it's selecting a bottle for a special celebration or simply finding the ideal pairing for your meal. We source our products from renowned vineyards and distilleries around the globe to ensure that you have access to the very best.</p>
+            <p>Join us for tasting events, workshops, and more to deepen your appreciation for the art of crafting fine spirits.</p>
         </section>
 
         <!-- Contact Section -->
