@@ -41,24 +41,22 @@ nav ul li a {
     font-weight: bold;
 }
 
-main {
+.hero {
+    background-color: #007bff;
+    color: white;
     padding: 2rem;
+    text-align: center;
 }
 
-.bottle-animation {
-    position: relative;
-    height: 200px;
-    margin: 20px 0;
+.sale-banner {
+    background-color: #ffc107;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-#bottle {
-    width: 100px;
-    animation: spill 2s forwards;
-}
-
-@keyframes spill {
-    0% { transform: translateY(-50px); }
-    100% { transform: translateY(200px); }
+.featured-products {
+    padding: 20px;
 }
 
 .product-list {
@@ -131,6 +129,13 @@ main {
 
 .popup-buttons button:hover {
     background-color: #218838;
+}
+
+footer {
+    background: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 .checkout-btn {
