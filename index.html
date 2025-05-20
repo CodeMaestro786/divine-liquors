@@ -11,40 +11,72 @@
         <nav>
             <h1>Divine Liquors</h1>
             <ul>
+                <li><a href="#" onclick="showHome()">Home</a></li>
                 <li><a href="#" onclick="showProducts()">Products</a></li>
                 <li><a href="#" onclick="showCart()">Cart</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#" onclick="showAbout()">About Us</a></li>
+                <li><a href="#" onclick="showContact()">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
+        <!-- Home Section -->
         <section id="home">
-            <h2>Welcome to Divine Liquors!</h2>
-            <div class="bottle-animation">
-                <img src="bottle.png" alt="Bottle" id="bottle">
+            <div class="hero">
+                <h2>Welcome to Divine Liquors!</h2>
+                <p>Check out our latest offers and featured products!</p>
+                <div class="sale-banner">Sale! Up to 50% off on selected items!</div>
+            </div>
+            <div class="featured-products">
+                <h3>Featured Products</h3>
+                <div id="featured-list" class="product-list"></div>
             </div>
         </section>
 
+        <!-- Products Section -->
         <section id="products" style="display:none;">
             <h2>Our Products</h2>
             <div id="product-list" class="product-list"></div>
         </section>
 
+        <!-- Cart Section -->
         <section id="cart" style="display:none;">
             <h2>Your Cart</h2>
             <div id="cart-items" class="cart-items"></div>
             <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
         </section>
+
+        <!-- About Section -->
+        <section id="about" style="display:none;">
+            <h2>About Us</h2>
+            <p>We are Divine Liquors, your go-to destination for the finest alcoholic beverages. Established in 2021, we pride ourselves on offering a unique selection tailored to your preferences.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, reach out to us via the following:</p>
+            <p>Email: support@divineliquors.com</p>
+            <p>Phone: +27 123 456 789</p>
+        </section>
     </main>
+
+    <footer>
+        <h4>Our Branches:</h4>
+        <ul>
+            <li>Branch 1: 123 Main St, Cape Town</li>
+            <li>Branch 2: 456 Elm St, Johannesburg</li>
+            <li>Branch 3: 789 Oak St, Durban</li>
+        </ul>
+    </footer>
 
     <div id="branch-selection-popup" class="popup">
         <h3>Select Your Branch</h3>
         <select id="branch-selector">
-            <option value="Branch 1">Branch 1: 123 Main St</option>
-            <option value="Branch 2">Branch 2: 456 Elm St</option>
-            <option value="Branch 3">Branch 3: 789 Oak St</option>
+            <option value="Branch 1">Branch 1</option>
+            <option value="Branch 2">Branch 2</option>
+            <option value="Branch 3">Branch 3</option>
         </select>
         <div class="popup-buttons">
             <button onclick="setBranch()">Confirm</button>
