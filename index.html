@@ -9,21 +9,26 @@
 </head>
 <body>
     <header>
-        <nav>
+        <div class="navbar">
             <h1>Divine Liquors</h1>
-            <ul>
-                <li><a href="#" onclick="showHome()">Home</a></li>
-                <li><a href="#" onclick="showProducts()">Products</a></li>
-                <li><a href="#" onclick="showCart()">Cart</a></li>
-                <li><a href="#" onclick="showAbout()">About Us</a></li>
-                <li><a href="#" onclick="showContact()">Contact Us</a></li>
-            </ul>
-        </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#products" onclick="showSection('products')">Products</a></li>
+                    <li><a href="#branches" onclick="showSection('branches')">Branches</a></li>
+                    <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main id="main-content">
         <!-- Home Section -->
-        <section id="home" class="section">
+        <section id="home" class="section active">
             <div class="hero">
                 <h2>Welcome to Divine Liquors!</h2>
                 <p>Check out our latest offers and featured products!</p>
@@ -31,35 +36,45 @@
             </div>
             <div class="featured-products">
                 <h3>Featured Products</h3>
-                <div id="featured-list" class="product-list"></div>
+                <div id="product-list" class="product-list">
+                    <div class="product-card">
+                        <img src="whiskey.jpg" alt="Whiskey">
+                        <h4>Premium Whiskey</h4>
+                        <p>$49.99</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="vodka.jpg" alt="Vodka">
+                        <h4>Craft Vodka</h4>
+                        <p>$39.99</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="rum.jpg" alt="Rum">
+                        <h4>Exotic Rum</h4>
+                        <p>$29.99</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="gin.jpg" alt="Gin">
+                        <h4>Fine Gin</h4>
+                        <p>$34.99</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="tequila.jpg" alt="Tequila">
+                        <h4>Aged Tequila</h4>
+                        <p>$44.99</p>
+                    </div>
+                    <div class="product-card">
+                        <img src="wine.jpg" alt="Wine">
+                        <h4>Red Wine</h4>
+                        <p>$24.99</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Products Section -->
         <section id="products" class="section" style="display:none;">
             <h2>Our Products</h2>
-            <div id="product-list" class="product-list"></div>
-        </section>
-
-        <!-- Cart Section -->
-        <section id="cart" class="section" style="display:none;">
-            <h2>Your Cart</h2>
-            <div id="cart-items" class="cart-items"></div>
-            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section" style="display:none;">
-            <h2>About Us</h2>
-            <p>We are Divine Liquors, your go-to destination for the finest alcoholic beverages. Established in 2021, we pride ourselves on offering a unique selection tailored to your preferences.</p>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section" style="display:none;">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, reach out to us via the following:</p>
-            <p>Email: support@divineliquors.com</p>
-            <p>Phone: +27 123 456 789</p>
+            <div class="product-list"></div>
         </section>
 
         <!-- Branches Section -->
@@ -103,6 +118,20 @@
                 </div>
             </div>
         </section>
+
+        <!-- About Section -->
+        <section id="about" class="section" style="display:none;">
+            <h2>About Us</h2>
+            <p>We are Divine Liquors, your go-to destination for the finest alcoholic beverages. Established in 2021, we pride ourselves on offering a unique selection tailored to your preferences.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section" style="display:none;">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, reach out to us via the following:</p>
+            <p>Email: support@divineliquors.com</p>
+            <p>Phone: +27 123 456 789</p>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -121,11 +150,11 @@
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#branches">Branches</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#products" onclick="showSection('products')">Products</a></li>
+                    <li><a href="#branches" onclick="showSection('branches')">Branches</a></li>
+                    <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                    <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -152,19 +181,6 @@
             <p>&copy; 2023 DIVINE LIQUORS. All Rights Reserved. Must be 21+ to purchase alcohol.</p>
         </div>
     </footer>
-
-    <div id="branch-selection-popup" class="popup">
-        <h3>Select Your Branch</h3>
-        <select id="branch-selector">
-            <option value="Branch 1">Branch 1</option>
-            <option value="Branch 2">Branch 2</option>
-            <option value="Branch 3">Branch 3</option>
-        </select>
-        <div class="popup-buttons">
-            <button onclick="setBranch()">Confirm</button>
-            <button onclick="closePopup()">Cancel</button>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
