@@ -5,23 +5,46 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     color: #333;
 }
 
 /* Header */
 header {
-    background-color: #343a40;
-    color: #fff;
-    padding: 1rem 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 5%;
+    position: relative;
+    z-index: 2;
 }
 
+.logo img {
+    height: 60px;
+}
+
+/* Navigation */
 .nav {
     display: flex;
 }
@@ -55,12 +78,13 @@ header {
         background-color: #343a40;
         position: absolute;
         top: 60px;
-        left: 0;
-        right: 0;
+        left: -100%;
+        transition: left 0.3s ease;
     }
 
     .nav.active {
         display: flex;
+        left: 0;
     }
 
     .menu-toggle {
@@ -75,6 +99,7 @@ header {
 
 .hero {
     text-align: center;
+    position: relative;
 }
 
 .sale-banner {
@@ -108,6 +133,12 @@ header {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+}
+
+.product-card input {
+    width: 50px;
+    text-align: center;
+    margin: 0.5rem 0;
 }
 
 /* Branches Section */
@@ -154,6 +185,11 @@ header {
 .branch-card p {
     margin-bottom: 0.5rem;
     color: rgba(0, 0, 0, 0.75);
+}
+
+/* About Section */
+#about {
+    display: block;
 }
 
 /* Footer */
