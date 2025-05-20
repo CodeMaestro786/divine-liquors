@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divine Liquors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Divine Liquors</h1>
+            <ul>
+                <li><a href="#" onclick="showProducts()">Products</a></li>
+                <li><a href="#" onclick="showCart()">Cart</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="home">
+            <h2>Welcome to Divine Liquors!</h2>
+            <div class="bottle-animation">
+                <img src="bottle.png" alt="Bottle" id="bottle">
+            </div>
+        </section>
+
+        <section id="products" style="display:none;">
+            <h2>Our Products</h2>
+            <div id="product-list" class="product-list"></div>
+        </section>
+
+        <section id="cart" style="display:none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart-items"></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <div id="branch-selection-popup" class="popup">
+        <h3>Select Your Branch</h3>
+        <select id="branch-selector">
+            <option value="Branch 1">Branch 1: 123 Main St</option>
+            <option value="Branch 2">Branch 2: 456 Elm St</option>
+            <option value="Branch 3">Branch 3: 789 Oak St</option>
+        </select>
+        <div class="popup-buttons">
+            <button onclick="setBranch()">Confirm</button>
+            <button onclick="closePopup()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
