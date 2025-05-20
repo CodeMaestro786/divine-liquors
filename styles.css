@@ -259,3 +259,20 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(230, 241, 255, 0.5);
 }
+
+.cart-list, .cart-total {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.cart-list div {
+    margin-bottom: 0.5rem;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
