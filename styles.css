@@ -1,154 +1,113 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Branches Section */
+.branches {
+    background-color: #f8f9fa; /* Adjust color as needed */
+    padding: 2rem 0;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    color: #343a40;
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-header {
-    background: #343a40;
-    color: white;
-    padding: 1rem;
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 5%;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero {
-    background-color: #007bff;
-    color: white;
+.branch-card {
+    background-color: #fff; /* Adjust color as needed */
+    border-radius: 10px;
     padding: 2rem;
-    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.sale-banner {
-    background-color: #ffc107;
-    padding: 10px;
-    margin-top: 10px;
-    font-weight: bold;
+.branch-card:hover {
+    transform: translateY(-5px);
 }
 
-.featured-products {
-    padding: 20px;
+.branch-icon {
+    font-size: 2.5rem;
+    color: #007bff; /* Accent color */
+    margin-bottom: 1rem;
 }
 
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+.branch-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.product-list div {
-    background: white;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    padding: 1rem;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.branch-card p {
+    margin-bottom: 0.5rem;
+    color: rgba(0, 0, 0, 0.75);
 }
 
-.product-list button {
-    margin-top: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.product-list button:hover {
-    background-color: #0056b3;
-}
-
-.cart-items {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.popup {
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    z-index: 1000;
-    border-radius: 8px;
-}
-
-.popup h3 {
-    margin-top: 0;
-}
-
-.popup-buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-.popup-buttons button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.popup-buttons button:hover {
-    background-color: #218838;
-}
-
+/* Footer */
 footer {
-    background: #343a40;
-    color: white;
-    padding: 20px;
+    background-color: #343a40; /* Dark background */
+    padding: 3rem 5%;
+    color: #fff;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+    color: #ffc107; /* Accent color */
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: rgba(230, 241, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffc107; /* Change to accent color */
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ffc107; /* Change to accent color */
+    color: #343a40; /* Dark text */
+    transform: translateY(-3px);
+}
+
+.copyright {
     text-align: center;
-}
-
-.checkout-btn {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.3s;
-}
-
-.checkout-btn:hover {
-    background-color: #218838;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(230, 241, 255, 0.5);
 }
